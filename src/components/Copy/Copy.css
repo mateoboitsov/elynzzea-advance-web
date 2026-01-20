@@ -1,0 +1,7 @@
+.line {
+  position: relative;
+  transform: translateY(0%);
+  will-change: transform;
+  padding-bottom: 0.2em;
+  margin-bottom: -0.2em;
+}

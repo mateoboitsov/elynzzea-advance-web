@@ -1,0 +1,237 @@
+.service-hero {
+  position: relative;
+  width: 100vw;
+  min-height: 150svh;
+  height: 100%;
+  overflow: hidden;
+}
+
+.service-hero .service-hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.service-hero .service-hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-hero .service-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-dark-light);
+}
+
+.service-content {
+  padding: 4rem 0 8rem 0;
+}
+
+.service-hero-header h1 {
+  position: relative;
+}
+
+.service-hero .container {
+  position: relative;
+  padding-top: 35svh;
+  color: var(--text-on-image);
+}
+
+.service-hero .container .service-content,
+.service-details.service-details-1 .container,
+.service-details.service-details-2 .container {
+  display: flex;
+  position: relative;
+  gap: 2rem;
+}
+
+.service-col:nth-child(1) {
+  flex: 2;
+}
+
+.service-col:nth-child(2) {
+  flex: 3;
+}
+
+.service-hero .service-content .service-col:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.service-hero .service-content .service-col:nth-child(2) h3 {
+  width: 85%;
+  margin-bottom: 2rem;
+}
+
+.service-meta .service-hero-row {
+  display: flex;
+  gap: 2rem;
+}
+
+.service-meta .service-hero-row .service-hero-sub-col {
+  flex: 1;
+}
+
+.service-meta
+  .service-hero-row
+  .service-hero-sub-col
+  p:nth-child(1) {
+  margin-bottom: 1rem;
+}
+
+.service-details {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  color: var(--base-350);
+  padding-top: 4rem;
+}
+
+.service-details h3 {
+  width: 85%;
+  color: var(--base-100);
+  margin-bottom: 2rem;
+}
+
+.service-details-img {
+  width: 75%;
+  border-radius: 2rem;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  margin-top: 4rem;
+}
+
+.service-details-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
+.service-details.service-details-2 .service-meta {
+  margin-bottom: 4rem;
+  color: var(--base-100);
+}
+
+.service-details.service-details-2
+  .service-meta
+  .service-hero-sub-col
+  p:nth-child(1) {
+  color: var(--base-350);
+  margin-bottom: 1rem;
+}
+
+.service-details.service-details-2 .service-details-img {
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+}
+
+.faqs-container {
+  margin-bottom: 4rem;
+  width: 100%;
+}
+
+.faq-item {
+  margin-bottom: 3rem;
+  border-bottom: 1px solid rgba(28, 24, 23, 0.12);
+  padding-bottom: 2rem;
+}
+
+.faq-item:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.faq-question-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  gap: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.faq-question-button:hover {
+  opacity: 0.8;
+}
+
+.service-details.service-details-2 .faq-question {
+  color: var(--base-100);
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.faq-icon {
+  color: var(--base-100);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  transition: opacity 0.2s ease;
+  margin-top: 0.1rem;
+}
+
+.faq-answer-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease-in-out, margin-top 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  margin-top: 0;
+}
+
+.faq-answer-wrapper.open {
+  max-height: 500px;
+  margin-top: 1rem;
+  opacity: 1;
+}
+
+.faq-answer {
+  color: var(--base-100);
+  line-height: 1.8;
+  margin: 0;
+}
+
+@media (max-width: 1000px) {
+  .service-hero .container .service-content,
+  .service-details.service-details-1 .container,
+  .service-details.service-details-2 .container {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .service-details-img,
+  .service-hero .service-content .service-col:nth-child(2) h3,
+  .service-details h3 {
+    width: 100%;
+  }
+
+  .faqs-container {
+    margin-bottom: 2rem;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+  }
+
+  .faq-icon {
+    font-size: 1.3rem;
+  }
+
+  .faq-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
