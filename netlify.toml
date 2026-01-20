@@ -3,7 +3,7 @@
 
 [build]
   command = "npm run build"
-  publish = "out"
+  publish = ".next"
 
 [build.environment]
-  NEXT_TURBOPACK = "false"
+  NEXT_TURBOPACK = "0"
